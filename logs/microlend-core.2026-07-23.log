@@ -1,0 +1,218 @@
+2026-07-23 09:59:35.498 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-23 09:59:35.637 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 10800 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-23 09:59:35.637 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-23 09:59:40.993 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-23 09:59:41.528 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 506 ms. Found 18 JPA repository interfaces.
+2026-07-23 09:59:44.543 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-23 09:59:44.577 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-23 09:59:44.587 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 09:59:44.587 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-23 09:59:44.860 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 09:59:44.866 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9085 ms
+2026-07-23 09:59:46.118 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-23 09:59:46.366 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-23 09:59:46.466 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-23 09:59:47.363 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-23 09:59:47.464 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-23 09:59:48.765 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50d05167
+2026-07-23 09:59:48.773 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-23 09:59:55.677 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-23 09:59:57.909 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 10:00:02.903 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-23 10:00:06.179 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-23 10:00:07.526 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: eb3561e4-f0c3-4b73-b4c1-c55c65283773
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-23 10:00:07.548 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-23 10:00:08.940 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-23 10:00:10.709 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-23 10:00:10.774 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-23 10:00:10.830 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 36.5 seconds (process running for 37.645)
+2026-07-23 10:00:11.616 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-23 10:00:19.746 [http-nio-8090-exec-2] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23 10:00:19.746 [http-nio-8090-exec-2] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-23 10:00:19.746 [http-nio-8090-exec-2] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-07-23 10:00:21.110 [http-nio-8090-exec-2] INFO  [cid=aa4614a1] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-23 10:00:44.487 [http-nio-8090-exec-6] INFO  [cid=90e443c1] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-07-23 10:00:44.501 [http-nio-8090-exec-6] INFO  [cid=90e443c1] c.m.d.service.DelinquencyService - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=0, accountsScanned=3, casesOpened=0, casesUpdated=0, casesResolved=0]
+2026-07-23 10:00:58.463 [http-nio-8090-exec-9] INFO  [cid=504dca46] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-23 10:01:17.884 [http-nio-8090-exec-10] INFO  [cid=abccc47e] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=3
+2026-07-23 10:04:27.952 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 10:04:27.952 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-23 10:04:27.978 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-23 10:20:10.653 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-23 10:20:10.820 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 27984 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-23 10:20:10.822 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-23 10:20:16.129 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-23 10:20:16.922 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 764 ms. Found 18 JPA repository interfaces.
+2026-07-23 10:20:20.508 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-23 10:20:20.560 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-23 10:20:20.576 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 10:20:20.577 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-23 10:20:20.971 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 10:20:20.976 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9993 ms
+2026-07-23 10:20:22.578 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-23 10:20:22.917 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-23 10:20:23.136 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-23 10:20:25.077 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-23 10:20:25.196 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-23 10:20:25.707 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a80a896
+2026-07-23 10:20:25.714 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-23 10:20:31.250 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-23 10:20:32.391 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 10:20:36.310 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-23 10:20:39.947 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-23 10:20:42.871 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 185740e9-5e2f-4d42-b070-1ccf01d1529f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-23 10:20:42.931 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-23 10:20:45.679 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-23 10:20:48.767 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-23 10:20:48.973 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-23 10:20:49.053 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 40.3 seconds (process running for 42.07)
+2026-07-23 10:20:50.147 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-23 10:20:58.396 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23 10:20:58.396 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-23 10:20:58.404 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-07-23 10:21:00.336 [http-nio-8090-exec-1] INFO  [cid=4c2e5cfc] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=4
+2026-07-23 10:25:36.037 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 10:25:36.045 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-23 10:25:36.061 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-23 14:37:21.361 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-23 14:37:21.532 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 18124 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-23 14:37:21.536 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-23 14:37:26.265 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-23 14:37:26.739 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 439 ms. Found 18 JPA repository interfaces.
+2026-07-23 14:37:29.894 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-23 14:37:29.958 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-23 14:37:29.969 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 14:37:29.971 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-23 14:37:30.208 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 14:37:30.212 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8501 ms
+2026-07-23 14:37:31.523 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-23 14:37:31.803 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-23 14:37:31.919 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-23 14:37:32.844 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-23 14:37:32.916 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-23 14:37:33.332 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8dbf0f2
+2026-07-23 14:37:33.336 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-23 14:37:36.685 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-23 14:37:37.688 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 14:37:39.379 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-23 14:37:41.248 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-23 14:37:42.676 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 22c387c7-8e3d-491b-80a2-ba93d271be8a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-23 14:37:42.702 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-23 14:37:44.038 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-23 14:37:45.875 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-23 14:37:45.953 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-23 14:37:45.989 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 26.159 seconds (process running for 27.67)
+2026-07-23 14:37:46.523 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-23 14:38:09.673 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23 14:38:09.673 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-23 14:38:09.680 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2026-07-23 15:15:57.237 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 15:15:57.254 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-23 15:15:57.265 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-23 16:50:53.503 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-23 16:50:53.656 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 15600 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-23 16:50:53.658 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-23 16:50:57.752 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-23 16:50:58.220 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 443 ms. Found 18 JPA repository interfaces.
+2026-07-23 16:51:01.037 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-23 16:51:01.084 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-23 16:51:01.097 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 16:51:01.097 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-23 16:51:01.351 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 16:51:01.354 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7537 ms
+2026-07-23 16:51:02.580 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-23 16:51:02.839 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-23 16:51:02.986 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-23 16:51:03.681 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-23 16:51:03.788 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-23 16:51:04.102 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13c81bc5
+2026-07-23 16:51:04.107 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-23 16:51:06.781 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-23 16:51:07.802 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 16:51:09.318 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-23 16:51:11.121 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-23 16:51:12.440 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0ec4ff98-3748-4cd7-8329-f1d1a5b02065
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-23 16:51:12.462 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-23 16:51:13.705 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-23 16:51:15.417 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-23 16:51:15.476 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-23 16:51:15.524 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 23.806 seconds (process running for 25.198)
+2026-07-23 16:51:16.182 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-23 16:52:36.633 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23 16:52:36.633 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-23 16:52:36.646 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2026-07-23 16:52:38.683 [http-nio-8090-exec-1] INFO  [cid=bdf791b5] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-23 16:53:52.627 [http-nio-8090-exec-5] INFO  [cid=e0b208ce] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=3
+2026-07-23 16:54:14.349 [http-nio-8090-exec-7] INFO  [cid=936aa405] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=4
+2026-07-23 16:55:01.524 [http-nio-8090-exec-4] INFO  [cid=cdc0d422] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=null
+2026-07-23 16:56:45.311 [http-nio-8090-exec-10] INFO  [cid=5c8fcb5b] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=null
+2026-07-23 17:17:05.281 [HikariPool-1 housekeeper] WARN  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m31s274ms200µs400ns).
+2026-07-23 17:22:33.495 [HikariPool-1 housekeeper] WARN  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m34s735ms409µs600ns).
+2026-07-23 17:28:35.149 [http-nio-8090-exec-1] INFO  [cid=b7be400f] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=null
+2026-07-23 17:28:43.550 [http-nio-8090-exec-3] INFO  [cid=e1fd80b4] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-23 17:47:07.549 [http-nio-8090-exec-7] INFO  [cid=df05f88e] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=4
+2026-07-23 17:48:52.502 [http-nio-8090-exec-7] INFO  [cid=63ada1a0] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-23 18:21:04.293 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 18:21:04.317 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-23 18:21:04.327 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-23 20:52:18.541 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-23 20:52:18.638 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 19060 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-23 20:52:18.638 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-23 20:52:21.616 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-23 20:52:21.948 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 311 ms. Found 18 JPA repository interfaces.
+2026-07-23 20:52:24.303 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-23 20:52:24.319 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-23 20:52:24.324 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 20:52:24.324 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-23 20:52:24.433 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 20:52:24.433 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5695 ms
+2026-07-23 20:52:25.224 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-23 20:52:25.429 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-23 20:52:25.520 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-23 20:52:26.046 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-23 20:52:26.105 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-23 20:52:26.364 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1da32baf
+2026-07-23 20:52:26.364 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-23 20:52:28.467 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-23 20:52:29.586 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 20:52:30.796 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-23 20:52:32.096 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-23 20:52:33.044 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1cb91a83-ef6f-45f5-80f8-72fc26c9c6ec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-23 20:52:33.060 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-23 20:52:33.984 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-23 20:52:35.182 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-23 20:52:35.208 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-23 20:52:35.230 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 17.725 seconds (process running for 18.927)
+2026-07-23 20:52:35.674 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-23 20:53:31.853 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23 20:53:31.855 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-23 20:53:31.857 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-23 20:58:16.821 [http-nio-8090-exec-5] INFO  [cid=49f63603] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-23 21:07:44.147 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-23 21:07:44.149 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-23 21:07:44.169 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

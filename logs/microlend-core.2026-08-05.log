@@ -1,0 +1,650 @@
+2026-08-05 09:16:14.463 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-08-05 09:16:14.644 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21 with PID 7380 (C:\Users\2503540\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503540 in C:\Users\2503540\OneDrive - Cognizant\Desktop\Microlend)
+2026-08-05 09:16:14.647 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-08-05 09:16:17.838 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05 09:16:18.186 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 334 ms. Found 18 JPA repository interfaces.
+2026-08-05 09:16:19.975 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-08-05 09:16:20.006 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-08-05 09:16:20.006 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-05 09:16:20.006 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-08-05 09:16:20.090 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-05 09:16:20.090 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5307 ms
+2026-08-05 09:16:20.829 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-05 09:16:20.978 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-05 09:16:21.034 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-05 09:16:21.431 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05 09:16:21.468 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-05 09:16:21.636 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bde704a
+2026-08-05 09:16:21.636 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-05 09:16:23.035 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05 09:16:24.161 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 09:16:25.242 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05 09:16:26.651 [main] INFO  [cid=none] c.m.b.service.KycStorageServiceImpl - KYC storage root: C:\Users\2503540\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-08-05 09:16:27.583 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d8eabb2d-127f-4ec6-914d-7f80c8a4bf4a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-05 09:16:27.595 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-05 09:16:28.312 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-08-05 09:16:29.428 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-08-05 09:16:29.472 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-08-05 09:16:29.492 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 19.631 seconds (process running for 21.182)
+2026-08-05 09:16:29.825 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-08-05 09:16:59.986 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05 09:16:59.986 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-05 09:16:59.994 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-08-05 09:24:28.114 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 09:24:28.119 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-05 09:24:28.147 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-05 09:44:26.343 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-08-05 09:44:26.438 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21 with PID 8464 (C:\Users\2503540\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503540 in C:\Users\2503540\OneDrive - Cognizant\Desktop\Microlend)
+2026-08-05 09:44:26.438 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-08-05 09:44:29.150 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05 09:44:29.590 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 434 ms. Found 18 JPA repository interfaces.
+2026-08-05 09:44:31.819 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-08-05 09:44:31.863 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-08-05 09:44:31.876 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-05 09:44:31.876 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-08-05 09:44:32.120 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-05 09:44:32.122 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5575 ms
+2026-08-05 09:44:33.203 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-05 09:44:33.397 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-05 09:44:33.460 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-05 09:44:33.934 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05 09:44:33.981 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-05 09:44:34.374 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f4e389a
+2026-08-05 09:44:34.380 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-05 09:44:41.465 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05 09:44:42.673 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 09:44:44.129 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05 09:44:45.335 [main] INFO  [cid=none] c.m.b.service.KycStorageServiceImpl - KYC storage root: C:\Users\2503540\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-08-05 09:44:46.097 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8d7ab1b3-b6c3-4d5e-aa68-2ace1bff3f88
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-05 09:44:46.109 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-05 09:44:46.752 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-08-05 09:44:47.662 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-08-05 09:44:47.694 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-08-05 09:44:47.718 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 22.513 seconds (process running for 23.748)
+2026-08-05 09:44:48.057 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-08-05 09:45:19.915 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05 09:45:19.916 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-05 09:45:19.920 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-08-05 09:49:28.860 [http-nio-8090-exec-6] WARN  [cid=6c5cc405] c.m.i.s.JwtAuthenticationFilter - Rejected JWT: JWT expired 32128854 milliseconds ago at 2026-08-04T19:24:00.000Z. Current time: 2026-08-05T04:19:28.854Z. Allowed clock skew: 0 milliseconds.
+2026-08-05 09:49:29.027 [http-nio-8090-exec-7] WARN  [cid=7462619d] c.m.i.s.JwtAuthenticationFilter - Rejected JWT: JWT expired 32129025 milliseconds ago at 2026-08-04T19:24:00.000Z. Current time: 2026-08-05T04:19:29.025Z. Allowed clock skew: 0 milliseconds.
+2026-08-05 09:49:30.108 [http-nio-8090-exec-5] INFO  [cid=334fb0cb] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=4
+2026-08-05 09:50:20.542 [http-nio-8090-exec-5] INFO  [cid=ba866fc7] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 09:51:17.284 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 09:51:17.290 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-05 09:51:17.305 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-05 10:19:34.032 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-08-05 10:19:34.142 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21 with PID 3044 (C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503539 in C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend)
+2026-08-05 10:19:34.145 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-08-05 10:19:36.789 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05 10:19:37.267 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 462 ms. Found 18 JPA repository interfaces.
+2026-08-05 10:19:39.423 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-08-05 10:19:39.445 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-08-05 10:19:39.458 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-05 10:19:39.459 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-08-05 10:19:39.695 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-05 10:19:39.699 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5425 ms
+2026-08-05 10:19:40.681 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-05 10:19:40.992 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-05 10:19:41.070 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-05 10:19:41.654 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05 10:19:41.710 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-05 10:19:41.927 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76134251
+2026-08-05 10:19:41.930 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-05 10:19:43.872 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05 10:19:44.542 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 10:19:45.496 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05 10:19:46.825 [main] INFO  [cid=none] c.m.b.service.KycStorageServiceImpl - KYC storage root: C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-08-05 10:19:47.770 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 38eda4c2-b1f5-493c-899a-bd1ec8734053
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-05 10:19:47.785 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-05 10:19:48.606 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-08-05 10:19:49.704 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-08-05 10:19:49.755 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-08-05 10:19:49.782 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 16.908 seconds (process running for 17.95)
+2026-08-05 10:19:50.159 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-08-05 10:30:02.325 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05 10:30:02.325 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-05 10:30:02.338 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-08-05 10:30:04.309 [http-nio-8090-exec-1] INFO  [cid=1f8d385c] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 10:37:29.651 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 10:37:29.657 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-05 10:37:29.680 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-05 10:43:34.945 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-08-05 10:43:35.022 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21 with PID 2044 (C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503539 in C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend)
+2026-08-05 10:43:35.024 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-08-05 10:43:37.148 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05 10:43:37.429 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 266 ms. Found 18 JPA repository interfaces.
+2026-08-05 10:43:38.867 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-08-05 10:43:38.894 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-08-05 10:43:38.899 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-05 10:43:38.900 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-08-05 10:43:39.071 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-05 10:43:39.074 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3976 ms
+2026-08-05 10:43:39.869 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-05 10:43:40.011 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-05 10:43:40.083 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-05 10:43:40.701 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05 10:43:40.742 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-05 10:43:40.910 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dc2e473
+2026-08-05 10:43:40.914 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-05 10:43:42.518 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05 10:43:43.290 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 10:43:44.466 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05 10:43:45.683 [main] INFO  [cid=none] c.m.b.service.KycStorageServiceImpl - KYC storage root: C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-08-05 10:43:46.625 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 396ebdc8-493f-4423-8e76-4c383f16eaaf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-05 10:43:46.643 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-05 10:43:47.380 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-08-05 10:43:48.331 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-08-05 10:43:48.354 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-08-05 10:43:48.371 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 14.11 seconds (process running for 14.681)
+2026-08-05 10:43:48.652 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-08-05 10:43:52.506 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05 10:43:52.507 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-05 10:43:52.509 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-05 10:44:44.428 [http-nio-8090-exec-7] INFO  [cid=4e26da07] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=1
+2026-08-05 10:44:51.204 [http-nio-8090-exec-10] INFO  [cid=34971ff1] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=1
+2026-08-05 10:44:57.034 [http-nio-8090-exec-1] INFO  [cid=bb114363] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=1
+2026-08-05 10:45:01.509 [http-nio-8090-exec-9] INFO  [cid=683f11d7] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=1
+2026-08-05 10:45:25.519 [http-nio-8090-exec-8] INFO  [cid=9232efb0] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=1
+2026-08-05 10:47:43.198 [http-nio-8090-exec-2] INFO  [cid=91476814] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 10:49:40.874 [http-nio-8090-exec-9] INFO  [cid=e5081160] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 10:50:27.987 [http-nio-8090-exec-3] INFO  [cid=87d111c6] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=2
+2026-08-05 10:50:31.168 [http-nio-8090-exec-2] INFO  [cid=b5bc9978] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=2
+2026-08-05 10:50:37.036 [http-nio-8090-exec-4] INFO  [cid=bc7fafcb] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=2
+2026-08-05 10:50:56.009 [http-nio-8090-exec-7] INFO  [cid=7956d773] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 10:51:25.334 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 10:51:25.338 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-05 10:51:25.346 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-05 11:06:45.826 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-08-05 11:06:45.964 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21 with PID 14624 (C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503539 in C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend)
+2026-08-05 11:06:45.966 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-08-05 11:06:48.979 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05 11:06:49.420 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 417 ms. Found 18 JPA repository interfaces.
+2026-08-05 11:06:51.841 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-08-05 11:06:51.879 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-08-05 11:06:51.890 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-05 11:06:51.891 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-08-05 11:06:52.048 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-05 11:06:52.049 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5988 ms
+2026-08-05 11:06:52.932 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-05 11:06:53.072 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-05 11:06:53.136 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-05 11:06:53.638 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05 11:06:53.683 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-05 11:06:53.894 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@389bc2d3
+2026-08-05 11:06:53.897 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-05 11:06:56.062 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05 11:06:56.943 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 11:06:58.441 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05 11:06:59.919 [main] INFO  [cid=none] c.m.b.service.KycStorageServiceImpl - KYC storage root: C:\Users\2503539\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-08-05 11:07:00.912 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d0a3d3b3-bb05-4b03-a87c-c8dc6f8b8adf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-05 11:07:00.927 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-05 11:07:01.749 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-08-05 11:07:03.000 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-08-05 11:07:03.026 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-08-05 11:07:03.058 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 18.433 seconds (process running for 19.537)
+2026-08-05 11:07:03.419 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-08-05 11:07:10.213 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05 11:07:10.215 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-05 11:07:10.220 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-08-05 11:08:07.723 [http-nio-8090-exec-5] INFO  [cid=a82c6176] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 11:09:07.951 [http-nio-8090-exec-9] INFO  [cid=e65b2979] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 11:09:46.099 [http-nio-8090-exec-10] INFO  [cid=74eec8e2] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_DELETED userId=2
+2026-08-05 11:10:01.965 [http-nio-8090-exec-9] INFO  [cid=6d365ca7] c.m.audit.service.LocalAuditService - AUDIT module=GROUP action=GROUP_DELETED userId=2
+2026-08-05 11:14:02.803 [http-nio-8090-exec-5] INFO  [cid=b28d337a] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 11:15:57.928 [http-nio-8090-exec-4] INFO  [cid=f2d40ca9] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 11:22:49.947 [http-nio-8090-exec-4] INFO  [cid=9b0ee5fb] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 11:43:12.409 [http-nio-8090-exec-1] INFO  [cid=59358da4] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 12:00:11.662 [http-nio-8090-exec-9] INFO  [cid=0e7705be] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 12:01:11.607 [http-nio-8090-exec-5] INFO  [cid=37042196] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-08-05 12:01:11.618 [http-nio-8090-exec-5] INFO  [cid=37042196] c.m.d.service.DelinquencyServiceImpl - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=0, accountsScanned=0, casesOpened=0, casesUpdated=0, casesResolved=0]
+2026-08-05 12:01:12.966 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_CASE_OPENED userId=null
+2026-08-05 12:01:12.997 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.n.s.LocalNotificationService - NOTIFY user=4 category=DELINQUENCY entity=DelinquencyCase:1
+2026-08-05 12:01:13.033 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_CASE_OPENED userId=null
+2026-08-05 12:01:13.049 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.n.s.LocalNotificationService - NOTIFY user=4 category=DELINQUENCY entity=DelinquencyCase:2
+2026-08-05 12:01:13.076 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_CASE_OPENED userId=null
+2026-08-05 12:01:13.087 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.n.s.LocalNotificationService - NOTIFY user=4 category=DELINQUENCY entity=DelinquencyCase:3
+2026-08-05 12:01:13.116 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_CASE_OPENED userId=null
+2026-08-05 12:01:13.130 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.n.s.LocalNotificationService - NOTIFY user=4 category=DELINQUENCY entity=DelinquencyCase:4
+2026-08-05 12:01:13.134 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-08-05 12:01:13.145 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.d.service.DelinquencyServiceImpl - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=4, accountsScanned=4, casesOpened=4, casesUpdated=0, casesResolved=0]
+2026-08-05 12:01:13.152 [http-nio-8090-exec-10] INFO  [cid=fc232816] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_DEMO_SEED userId=1
+2026-08-05 12:01:16.494 [http-nio-8090-exec-3] INFO  [cid=352c640e] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-08-05 12:01:16.509 [http-nio-8090-exec-3] INFO  [cid=352c640e] c.m.d.service.DelinquencyServiceImpl - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=0, accountsScanned=4, casesOpened=0, casesUpdated=0, casesResolved=0]
+2026-08-05 12:01:17.729 [http-nio-8090-exec-9] INFO  [cid=27e271c0] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-08-05 12:01:17.743 [http-nio-8090-exec-9] INFO  [cid=27e271c0] c.m.d.service.DelinquencyServiceImpl - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=0, accountsScanned=4, casesOpened=0, casesUpdated=0, casesResolved=0]
+2026-08-05 12:01:19.372 [http-nio-8090-exec-7] WARN  [cid=224be353] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+2026-08-05 12:01:19.373 [http-nio-8090-exec-7] ERROR [cid=224be353] o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry '999000000000' for key 'borrower.uk_borrower_national_id'
+2026-08-05 12:01:19.401 [http-nio-8090-exec-7] ERROR [cid=224be353] c.m.common.GlobalExceptionHandler - Unhandled exception
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry '999000000000' for key 'borrower.uk_borrower_national_id'] [insert into borrower (bank_account_number,borrower_type,centre_id,date_of_birth,district,gender,group_id,ifsc_code,monthly_income,name,national_id_number,occupation,phone,portal_user_id,registered_by_field_officer_id,status,village) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; SQL [insert into borrower (bank_account_number,borrower_type,centre_id,date_of_birth,district,gender,group_id,ifsc_code,monthly_income,name,national_id_number,occupation,phone,portal_user_id,registered_by_field_officer_id,status,village) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; constraint [borrower.uk_borrower_national_id]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy159.save(Unknown Source)
+	at com.microlend.delinquency.service.DelinquencyServiceImpl.generateDemoPortfolioAndScan(DelinquencyServiceImpl.java:209)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.microlend.delinquency.service.DelinquencyServiceImpl$$SpringCGLIB$$0.generateDemoPortfolioAndScan(<generated>)
+	at com.microlend.delinquency.controller.AdminDelinquencyController.demo(AdminDelinquencyController.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.microlend.identity.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.microlend.common.CorrelationIdFilter.doFilterInternal(CorrelationIdFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Duplicate entry '999000000000' for key 'borrower.uk_borrower_national_id'] [insert into borrower (bank_account_number,borrower_type,centre_id,date_of_birth,district,gender,group_id,ifsc_code,monthly_income,name,national_id_number,occupation,phone,portal_user_id,registered_by_field_officer_id,status,village) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.dialect.MySQLDialect.lambda$buildSQLExceptionConversionDelegate$3(MySQLDialect.java:1243)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:671)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:292)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:273)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:323)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:391)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:305)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy2/jdk.proxy2.$Proxy151.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:628)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:173)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:148)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 155 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '999000000000' for key 'borrower.uk_borrower_national_id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 201 common frames omitted
+2026-08-05 12:06:33.898 [http-nio-8090-exec-5] INFO  [cid=b66d3cce] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 12:19:04.492 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 12:19:04.519 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-05 12:19:04.545 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-05 19:38:46.897 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-08-05 19:38:47.010 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 14064 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-08-05 19:38:47.011 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-08-05 19:38:50.873 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05 19:38:51.323 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 431 ms. Found 18 JPA repository interfaces.
+2026-08-05 19:38:53.924 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-08-05 19:38:53.954 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-08-05 19:38:53.963 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-05 19:38:53.964 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-08-05 19:38:54.188 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-05 19:38:54.191 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7056 ms
+2026-08-05 19:38:55.268 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-05 19:38:55.498 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-05 19:38:55.593 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-05 19:38:56.676 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05 19:38:56.797 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-05 19:38:57.345 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ae5ddc0
+2026-08-05 19:38:57.353 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-05 19:39:00.818 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05 19:39:01.870 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 19:39:03.354 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05 19:39:04.737 [main] INFO  [cid=none] c.m.b.service.KycStorageServiceImpl - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-08-05 19:39:05.882 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b0ddffae-4dcd-40cb-84c0-48b0015f3fec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-05 19:39:05.896 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-05 19:39:07.054 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-08-05 19:39:08.548 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-08-05 19:39:08.611 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-08-05 19:39:08.659 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 23.038 seconds (process running for 24.067)
+2026-08-05 19:39:09.307 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-08-05 19:41:24.246 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05 19:41:24.246 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-05 19:41:24.254 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-08-05 19:43:55.486 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 19:43:55.490 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-05 19:43:55.510 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-05 19:44:00.824 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-08-05 19:44:00.902 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 29516 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-08-05 19:44:00.903 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-08-05 19:44:03.853 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05 19:44:04.353 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 474 ms. Found 18 JPA repository interfaces.
+2026-08-05 19:44:06.700 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-08-05 19:44:06.724 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-08-05 19:44:06.732 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-05 19:44:06.732 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-08-05 19:44:06.883 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-05 19:44:06.888 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5871 ms
+2026-08-05 19:44:07.781 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-05 19:44:08.069 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-05 19:44:08.181 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-05 19:44:08.814 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05 19:44:08.877 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-05 19:44:09.362 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@511bfbb0
+2026-08-05 19:44:09.365 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-05 19:44:14.478 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05 19:44:18.526 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 19:44:21.563 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05 19:44:25.115 [main] INFO  [cid=none] c.m.b.service.KycStorageServiceImpl - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-08-05 19:44:27.460 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ef3c259e-8fea-42df-8692-a8a40dac369e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-05 19:44:27.503 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-05 19:44:29.845 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-08-05 19:44:32.713 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-08-05 19:44:32.825 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-08-05 19:44:32.904 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 33.089 seconds (process running for 33.978)
+2026-08-05 19:44:34.578 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: created 6 seed users (default password redacted, forced reset on first login).
+2026-08-05 19:45:04.485 [http-nio-8090-exec-2] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05 19:45:04.485 [http-nio-8090-exec-2] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-05 19:45:04.493 [http-nio-8090-exec-2] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-08-05 19:45:05.839 [http-nio-8090-exec-2] INFO  [cid=c89c5f1e] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=1
+2026-08-05 19:45:24.057 [http-nio-8090-exec-1] INFO  [cid=e0b61d29] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=1
+2026-08-05 19:47:23.702 [http-nio-8090-exec-6] INFO  [cid=4b8bef36] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_PRODUCT action=LOAN_PRODUCT_CREATED userId=1
+2026-08-05 19:48:47.704 [http-nio-8090-exec-5] INFO  [cid=a911f10e] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_PRODUCT action=LOAN_PRODUCT_CREATED userId=1
+2026-08-05 19:50:35.525 [http-nio-8090-exec-1] INFO  [cid=1c06c2b4] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_PRODUCT action=LOAN_PRODUCT_CREATED userId=1
+2026-08-05 19:52:36.540 [http-nio-8090-exec-6] INFO  [cid=9bafee82] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_PRODUCT action=LOAN_PRODUCT_CREATED userId=1
+2026-08-05 19:53:52.579 [http-nio-8090-exec-5] INFO  [cid=8f43f8cf] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=2
+2026-08-05 19:54:13.357 [http-nio-8090-exec-8] INFO  [cid=2722029b] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=2
+2026-08-05 19:57:37.440 [http-nio-8090-exec-6] INFO  [cid=bf7bddb3] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_CREATED userId=2
+2026-08-05 19:58:45.693 [http-nio-8090-exec-8] INFO  [cid=813c5cbe] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_CREATED userId=2
+2026-08-05 20:00:08.650 [http-nio-8090-exec-1] INFO  [cid=1cf3571a] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_CREATED userId=2
+2026-08-05 20:05:12.375 [http-nio-8090-exec-9] INFO  [cid=8fe5e2ee] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-08-05 20:06:00.728 [http-nio-8090-exec-10] INFO  [cid=51aee68e] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 20:06:16.779 [http-nio-8090-exec-6] INFO  [cid=774c1f9f] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=2
+2026-08-05 20:06:23.145 [http-nio-8090-exec-3] INFO  [cid=a430ec96] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 20:07:19.798 [http-nio-8090-exec-6] INFO  [cid=39e4ae79] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-08-05 20:12:46.156 [http-nio-8090-exec-9] INFO  [cid=1a2a21d4] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-08-05 20:13:14.721 [http-nio-8090-exec-3] INFO  [cid=0e2b9fac] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_UPDATED userId=2
+2026-08-05 20:15:10.135 [http-nio-8090-exec-6] INFO  [cid=ff61ac6c] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-08-05 20:18:00.296 [http-nio-8090-exec-6] INFO  [cid=f4791a17] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-08-05 20:48:27.794 [HikariPool-1 housekeeper] WARN  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m54s791ms299µs200ns).
+2026-08-05 20:49:18.644 [http-nio-8090-exec-1] INFO  [cid=a1126f9a] c.m.audit.service.LocalAuditService - AUDIT module=GROUP action=GROUP_CREATED userId=2
+2026-08-05 20:53:09.181 [http-nio-8090-exec-7] INFO  [cid=63ad5481] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-08-05 20:53:30.752 [http-nio-8090-exec-10] INFO  [cid=7e23ad46] c.m.audit.service.LocalAuditService - AUDIT module=GROUP action=GROUP_DELETED userId=2
+2026-08-05 20:53:44.634 [http-nio-8090-exec-9] INFO  [cid=c69d814d] c.m.audit.service.LocalAuditService - AUDIT module=GROUP action=GROUP_CREATED userId=2
+2026-08-05 20:55:41.318 [http-nio-8090-exec-7] INFO  [cid=e25c1243] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-08-05 21:10:57.546 [http-nio-8090-exec-8] INFO  [cid=3954aae8] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_UPLOADED userId=2
+2026-08-05 21:11:23.810 [http-nio-8090-exec-7] INFO  [cid=40cbcded] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_UPLOADED userId=2
+2026-08-05 21:11:35.444 [http-nio-8090-exec-6] INFO  [cid=fd19dcba] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_UPLOADED userId=2
+2026-08-05 21:11:45.062 [http-nio-8090-exec-8] INFO  [cid=4693ae00] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_UPLOADED userId=2
+2026-08-05 21:11:55.613 [http-nio-8090-exec-7] INFO  [cid=51c09604] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_UPLOADED userId=2
+2026-08-05 21:12:07.266 [http-nio-8090-exec-6] INFO  [cid=9720f6ca] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_UPLOADED userId=2
+2026-08-05 21:12:43.230 [http-nio-8090-exec-8] INFO  [cid=e2d7c747] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=3
+2026-08-05 21:13:00.838 [http-nio-8090-exec-9] INFO  [cid=446b9263] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=3
+2026-08-05 21:13:07.632 [http-nio-8090-exec-3] INFO  [cid=a776262a] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=3
+2026-08-05 21:13:28.422 [http-nio-8090-exec-5] INFO  [cid=b6b2d2b2] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_VERIFIED userId=3
+2026-08-05 21:13:37.316 [http-nio-8090-exec-8] INFO  [cid=d638729a] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_VERIFIED userId=3
+2026-08-05 21:13:40.484 [http-nio-8090-exec-5] INFO  [cid=0d829e5a] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_VERIFIED userId=3
+2026-08-05 21:13:43.797 [http-nio-8090-exec-10] INFO  [cid=1530a51e] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_VERIFIED userId=3
+2026-08-05 21:13:47.246 [http-nio-8090-exec-2] INFO  [cid=52f8eb98] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_VERIFIED userId=3
+2026-08-05 21:13:50.334 [http-nio-8090-exec-6] INFO  [cid=acd8aa64] c.m.audit.service.LocalAuditService - AUDIT module=KYC action=KYC_VERIFIED userId=3
+2026-08-05 21:14:02.449 [http-nio-8090-exec-8] INFO  [cid=4c6a8765] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:14:43.995 [http-nio-8090-exec-5] INFO  [cid=a6923c4c] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_CREATED userId=2
+2026-08-05 21:15:22.450 [http-nio-8090-exec-6] INFO  [cid=62b78401] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_SUBMITTED userId=2
+2026-08-05 21:15:56.047 [http-nio-8090-exec-1] INFO  [cid=e7288309] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_SUBMITTED userId=2
+2026-08-05 21:16:20.858 [http-nio-8090-exec-7] INFO  [cid=19a08352] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_SUBMITTED userId=2
+2026-08-05 21:16:42.673 [http-nio-8090-exec-5] INFO  [cid=86c862a1] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_SUBMITTED userId=2
+2026-08-05 21:19:45.134 [http-nio-8090-exec-6] INFO  [cid=767d1c7e] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 21:20:15.730 [http-nio-8090-exec-8] INFO  [cid=8d6c35e1] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_PRODUCT action=LOAN_PRODUCT_UPDATED userId=1
+2026-08-05 21:21:30.611 [http-nio-8090-exec-4] INFO  [cid=34bdb120] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:21:43.911 [http-nio-8090-exec-9] INFO  [cid=e38c4afb] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_SUBMITTED userId=2
+2026-08-05 21:21:55.648 [http-nio-8090-exec-1] INFO  [cid=5bab679c] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_SUBMITTED userId=2
+2026-08-05 21:22:50.895 [http-nio-8090-exec-6] INFO  [cid=1e89bd88] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=3
+2026-08-05 21:23:36.500 [http-nio-8090-exec-3] INFO  [cid=423b0d62] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=3
+2026-08-05 21:24:05.847 [http-nio-8090-exec-8] INFO  [cid=caa98943] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_WAITLISTED userId=3
+2026-08-05 21:24:10.286 [http-nio-8090-exec-2] INFO  [cid=bc2f9cf8] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_REJECTED userId=3
+2026-08-05 21:24:14.171 [http-nio-8090-exec-4] INFO  [cid=d5040c72] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_REJECTED userId=3
+2026-08-05 21:24:19.152 [http-nio-8090-exec-3] INFO  [cid=b2d600e8] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_APPROVED userId=3
+2026-08-05 21:24:24.670 [http-nio-8090-exec-1] INFO  [cid=0f962802] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_APPROVED userId=3
+2026-08-05 21:24:29.666 [http-nio-8090-exec-7] INFO  [cid=19c6ef38] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_APPLICATION action=LOAN_APPLICATION_APPROVED userId=3
+2026-08-05 21:25:38.034 [http-nio-8090-exec-10] INFO  [cid=e05b13a8] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=11
+2026-08-05 21:25:51.693 [http-nio-8090-exec-5] INFO  [cid=7160a040] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=11
+2026-08-05 21:25:58.073 [http-nio-8090-exec-10] INFO  [cid=26ceb401] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_ACCOUNT action=SANCTION_ACCEPTED_LOAN_DISBURSED userId=11
+2026-08-05 21:26:31.235 [http-nio-8090-exec-7] INFO  [cid=7e384021] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=12
+2026-08-05 21:26:45.297 [http-nio-8090-exec-1] INFO  [cid=d683c936] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=12
+2026-08-05 21:26:50.585 [http-nio-8090-exec-7] INFO  [cid=d2dc5c9e] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_ACCOUNT action=SANCTION_ACCEPTED_LOAN_DISBURSED userId=12
+2026-08-05 21:28:15.239 [http-nio-8090-exec-5] INFO  [cid=5308285f] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=13
+2026-08-05 21:28:29.888 [http-nio-8090-exec-4] INFO  [cid=60875c2a] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=13
+2026-08-05 21:28:39.257 [http-nio-8090-exec-5] INFO  [cid=01a7ea01] c.m.audit.service.LocalAuditService - AUDIT module=LOAN_ACCOUNT action=SANCTION_ACCEPTED_LOAN_DISBURSED userId=13
+2026-08-05 21:28:57.188 [http-nio-8090-exec-2] INFO  [cid=6243f9cc] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=11
+2026-08-05 21:29:12.639 [http-nio-8090-exec-6] INFO  [cid=8b291498] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=4
+2026-08-05 21:29:16.005 [http-nio-8090-exec-4] INFO  [cid=7138e6b0] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=4
+2026-08-05 21:29:29.474 [http-nio-8090-exec-9] INFO  [cid=59e35aa7] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=4
+2026-08-05 21:30:21.525 [http-nio-8090-exec-6] INFO  [cid=6989e085] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:30:41.440 [http-nio-8090-exec-10] INFO  [cid=3c0c129c] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:30:48.923 [http-nio-8090-exec-8] INFO  [cid=d692dc60] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=4
+2026-08-05 21:31:40.177 [http-nio-8090-exec-2] INFO  [cid=6c9e6c94] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 21:31:59.894 [http-nio-8090-exec-4] INFO  [cid=9b6c9a81] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:32:21.964 [http-nio-8090-exec-5] INFO  [cid=c389e49b] c.m.audit.service.LocalAuditService - AUDIT module=COLLECTION action=COLLECTION_RECORDED userId=2
+2026-08-05 21:32:21.997 [http-nio-8090-exec-5] INFO  [cid=c389e49b] c.m.n.s.LocalNotificationService - NOTIFY user=12 category=RECEIPT entity=CollectionReceipt:1
+2026-08-05 21:32:22.063 [http-nio-8090-exec-8] INFO  [cid=820a51c9] c.m.audit.service.LocalAuditService - AUDIT module=COLLECTION action=COLLECTION_RECORDED userId=2
+2026-08-05 21:32:22.079 [http-nio-8090-exec-8] INFO  [cid=820a51c9] c.m.n.s.LocalNotificationService - NOTIFY user=13 category=RECEIPT entity=CollectionReceipt:2
+2026-08-05 21:32:29.378 [http-nio-8090-exec-1] INFO  [cid=c1fc1808] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=13
+2026-08-05 21:32:42.577 [http-nio-8090-exec-7] INFO  [cid=3d3bb23b] c.m.audit.service.LocalAuditService - AUDIT module=COLLECTION action=RECEIPT_APPROVED userId=13
+2026-08-05 21:32:42.592 [http-nio-8090-exec-7] INFO  [cid=3d3bb23b] c.m.n.s.LocalNotificationService - NOTIFY user=2 category=RECEIPT entity=CollectionReceipt:2
+2026-08-05 21:32:49.563 [http-nio-8090-exec-2] INFO  [cid=8920544a] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=12
+2026-08-05 21:32:53.446 [http-nio-8090-exec-4] INFO  [cid=7d31c3a4] c.m.audit.service.LocalAuditService - AUDIT module=COLLECTION action=RECEIPT_APPROVED userId=12
+2026-08-05 21:32:53.463 [http-nio-8090-exec-4] INFO  [cid=7d31c3a4] c.m.n.s.LocalNotificationService - NOTIFY user=2 category=RECEIPT entity=CollectionReceipt:1
+2026-08-05 21:32:59.828 [http-nio-8090-exec-9] INFO  [cid=57722c98] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:33:32.297 [http-nio-8090-exec-8] INFO  [cid=7106890d] c.m.audit.service.LocalAuditService - AUDIT module=COLLECTION action=COLLECTION_RECORDED userId=2
+2026-08-05 21:33:32.313 [http-nio-8090-exec-8] INFO  [cid=7106890d] c.m.n.s.LocalNotificationService - NOTIFY user=11 category=RECEIPT entity=CollectionReceipt:3
+2026-08-05 21:33:38.846 [http-nio-8090-exec-9] INFO  [cid=7ca354cc] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=11
+2026-08-05 21:33:42.449 [http-nio-8090-exec-1] INFO  [cid=7ee6d670] c.m.audit.service.LocalAuditService - AUDIT module=COLLECTION action=RECEIPT_APPROVED userId=11
+2026-08-05 21:33:42.466 [http-nio-8090-exec-1] INFO  [cid=7ee6d670] c.m.n.s.LocalNotificationService - NOTIFY user=2 category=RECEIPT entity=CollectionReceipt:3
+2026-08-05 21:33:49.364 [http-nio-8090-exec-2] INFO  [cid=3ae8e816] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:34:22.932 [http-nio-8090-exec-1] INFO  [cid=a535835a] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-08-05 21:38:02.988 [http-nio-8090-exec-4] INFO  [cid=1b609fb5] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:41:54.159 [http-nio-8090-exec-7] INFO  [cid=d001e27b] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-08-05 21:42:57.055 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05 21:42:57.062 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-05 21:42:57.075 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

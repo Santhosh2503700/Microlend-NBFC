@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
+@import "./theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: var(--font-family);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-regular);
+    color: var(--color-text);
+    background: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Restore a sensible heading scale after Tailwind Preflight neutralises it. */
+  h1 { font-size: var(--fs-2xl); }
+  h2 { font-size: var(--fs-xl); }
+  h3 { font-size: var(--fs-lg); }
+  h4 { font-size: var(--fs-md); }
+  h1, h2, h3, h4 {
+    font-weight: var(--fw-bold);
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* Custom scrollbar (emerald, unobtrusive). */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+  *::-webkit-scrollbar { width: 10px; height: 10px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover { background: var(--color-primary-hover); }
+}

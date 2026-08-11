@@ -1,0 +1,898 @@
+2026-07-28 04:05:07.396 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 04:05:07.525 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 25112 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 04:05:07.530 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 04:05:10.888 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 04:05:11.307 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 382 ms. Found 18 JPA repository interfaces.
+2026-07-28 04:05:14.130 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 04:05:14.156 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 04:05:14.172 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 04:05:14.172 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 04:05:14.363 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 04:05:14.365 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6690 ms
+2026-07-28 04:05:15.476 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 04:05:15.703 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 04:05:15.823 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 04:05:16.915 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 04:05:17.018 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 04:05:17.596 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79ee779c
+2026-07-28 04:05:17.596 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 04:05:20.351 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 04:05:22.011 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 04:05:23.214 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 04:05:24.743 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 04:05:26.309 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: fc5647d3-f1ee-4d7e-9d08-3365a47b1798
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 04:05:26.332 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 04:05:27.550 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 04:05:29.376 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 04:05:29.418 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 04:05:29.450 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 23.276 seconds (process running for 24.268)
+2026-07-28 04:05:29.928 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 04:05:39.224 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 04:05:39.233 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 04:05:39.250 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 09:22:18.576 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 09:22:18.694 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 26356 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 09:22:18.697 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 09:22:22.604 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 09:22:22.988 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 359 ms. Found 18 JPA repository interfaces.
+2026-07-28 09:22:26.018 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 09:22:26.037 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 09:22:26.043 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 09:22:26.044 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 09:22:26.188 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 09:22:26.190 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7311 ms
+2026-07-28 09:22:27.332 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 09:22:27.595 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 09:22:27.688 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 09:22:28.417 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 09:22:28.492 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 09:22:28.792 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59282dc6
+2026-07-28 09:22:28.797 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 09:22:31.441 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 09:22:32.761 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 09:22:34.597 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 09:22:35.890 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 09:22:37.327 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1933181c-ba11-44ec-8b22-d4fd4b2bf940
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 09:22:37.365 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 09:22:38.453 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 09:22:39.911 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 09:22:39.962 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 09:22:40.001 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 22.504 seconds (process running for 23.832)
+2026-07-28 09:22:40.557 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 09:24:54.780 [http-nio-8090-exec-6] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28 09:24:54.781 [http-nio-8090-exec-6] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-28 09:24:54.788 [http-nio-8090-exec-6] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2026-07-28 09:24:55.245 [http-nio-8090-exec-6] WARN  [cid=3dcbae22] c.m.i.s.JwtAuthenticationFilter - Rejected JWT: JWT expired 35708242 milliseconds ago at 2026-07-27T17:59:47.000Z. Current time: 2026-07-28T03:54:55.242Z. Allowed clock skew: 0 milliseconds.
+2026-07-28 09:24:55.432 [http-nio-8090-exec-7] WARN  [cid=b34e17fb] c.m.i.s.JwtAuthenticationFilter - Rejected JWT: JWT expired 35708431 milliseconds ago at 2026-07-27T17:59:47.000Z. Current time: 2026-07-28T03:54:55.431Z. Allowed clock skew: 0 milliseconds.
+2026-07-28 09:25:42.680 [http-nio-8090-exec-8] INFO  [cid=1fd692da] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-28 09:26:17.665 [http-nio-8090-exec-3] INFO  [cid=6707467d] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS_FORCE_RESET userId=4
+2026-07-28 09:27:17.608 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 09:27:17.610 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 09:27:17.626 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 09:27:25.397 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 09:27:25.537 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 11488 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 09:27:25.539 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 09:27:30.310 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 09:27:30.840 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 492 ms. Found 18 JPA repository interfaces.
+2026-07-28 09:27:33.905 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 09:27:33.944 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 09:27:33.956 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 09:27:33.957 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 09:27:34.215 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 09:27:34.218 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8538 ms
+2026-07-28 09:27:35.648 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 09:27:35.883 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 09:27:35.960 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 09:27:36.677 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 09:27:36.770 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 09:27:37.153 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59282dc6
+2026-07-28 09:27:37.157 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 09:27:40.070 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 09:27:41.115 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 09:27:43.421 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 09:27:45.570 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 09:27:47.478 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d0a899b8-ac5e-4776-9627-944b187465f8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 09:27:47.495 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 09:27:48.667 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 09:27:50.779 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 09:27:50.846 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 09:27:50.889 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 26.562 seconds (process running for 27.314)
+2026-07-28 09:27:51.538 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 09:38:20.141 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28 09:38:20.142 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-28 09:38:20.146 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-07-28 09:38:42.003 [http-nio-8090-exec-5] INFO  [cid=2325d8ec] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=PASSWORD_RESET_COMPLETED userId=4
+2026-07-28 09:38:56.980 [http-nio-8090-exec-3] INFO  [cid=6819f64f] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-28 09:39:05.967 [http-nio-8090-exec-2] INFO  [cid=6650ff67] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-28 09:47:29.960 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 09:47:29.968 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 09:47:29.991 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 11:39:42.905 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 11:39:43.029 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 18596 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 11:39:43.031 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 11:39:47.749 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 11:39:48.364 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 584 ms. Found 18 JPA repository interfaces.
+2026-07-28 11:39:51.417 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 11:39:51.456 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 11:39:51.466 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 11:39:51.467 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 11:39:51.731 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 11:39:51.734 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8528 ms
+2026-07-28 11:39:52.975 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 11:39:53.282 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 11:39:53.420 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 11:39:54.362 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 11:39:54.465 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 11:39:54.951 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e91cf69
+2026-07-28 11:39:54.957 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 11:39:58.652 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 11:39:59.779 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 11:40:01.446 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 11:40:03.422 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 11:40:04.867 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 90320dee-e03f-429c-988c-3c4ea0279c3f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 11:40:04.893 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 11:40:06.252 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 11:40:07.935 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 11:40:07.995 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 11:40:08.047 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 26.676 seconds (process running for 28.13)
+2026-07-28 11:40:08.641 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 11:41:12.147 [http-nio-8090-exec-3] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28 11:41:12.149 [http-nio-8090-exec-3] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-28 11:41:12.154 [http-nio-8090-exec-3] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-07-28 11:41:13.772 [http-nio-8090-exec-3] INFO  [cid=02eb07bb] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-28 11:45:18.712 [http-nio-8090-exec-10] INFO  [cid=9e48e552] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-28 12:10:27.558 [http-nio-8090-exec-5] INFO  [cid=3d19f6c6] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-28 12:10:36.991 [http-nio-8090-exec-9] INFO  [cid=85a6d7e0] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=2
+2026-07-28 12:10:43.147 [http-nio-8090-exec-2] INFO  [cid=25dcb764] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=2
+2026-07-28 12:10:45.634 [http-nio-8090-exec-6] INFO  [cid=f1e31a2b] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=2
+2026-07-28 12:10:56.771 [http-nio-8090-exec-10] INFO  [cid=ab147277] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-28 12:11:15.857 [http-nio-8090-exec-3] INFO  [cid=ca8fdcdb] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_FAILED userId=7
+2026-07-28 12:14:56.651 [http-nio-8090-exec-7] INFO  [cid=1a8ef405] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-28 12:17:10.234 [http-nio-8090-exec-1] INFO  [cid=a708d460] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-28 12:17:28.105 [http-nio-8090-exec-2] INFO  [cid=8bb53dbe] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-28 12:19:21.835 [http-nio-8090-exec-7] INFO  [cid=23141020] c.m.audit.service.LocalAuditService - AUDIT module=BORROWER action=BORROWER_REGISTERED userId=2
+2026-07-28 12:37:39.217 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 12:37:39.228 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 12:37:39.242 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 13:29:06.505 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 13:29:06.887 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 29348 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 13:29:06.887 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 13:29:23.052 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 13:29:24.682 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1572 ms. Found 18 JPA repository interfaces.
+2026-07-28 13:29:34.420 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 13:29:34.477 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 13:29:34.497 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 13:29:34.497 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 13:29:35.023 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 13:29:35.033 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 27768 ms
+2026-07-28 13:29:38.712 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 13:29:39.159 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 13:29:39.341 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 13:29:40.928 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 13:29:41.082 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 13:29:41.825 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@664254b6
+2026-07-28 13:29:41.834 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 13:29:50.205 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 13:29:51.471 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 13:29:55.999 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 13:30:00.487 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 13:30:03.515 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5a0d6585-e641-478f-a048-5e42f2b244fa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 13:30:03.549 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 13:30:07.001 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 13:30:10.472 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 13:30:10.605 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 13:30:10.712 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 66.278 seconds (process running for 67.569)
+2026-07-28 13:30:11.951 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 13:32:09.975 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28 13:32:09.975 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-28 13:32:09.975 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-07-28 13:32:12.192 [http-nio-8090-exec-1] INFO  [cid=669c2797] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=2
+2026-07-28 13:32:54.398 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 13:32:54.406 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 13:32:54.452 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 13:32:59.963 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 13:33:00.078 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 18428 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 13:33:00.092 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 13:33:03.328 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 13:33:03.769 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 419 ms. Found 18 JPA repository interfaces.
+2026-07-28 13:33:06.313 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 13:33:06.348 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 13:33:06.354 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 13:33:06.354 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 13:33:06.583 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 13:33:06.585 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6364 ms
+2026-07-28 13:33:07.540 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 13:33:07.796 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 13:33:07.905 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 13:33:08.683 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 13:33:08.760 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 13:33:09.144 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ae74eef
+2026-07-28 13:33:09.156 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 13:33:11.662 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 13:33:12.498 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 13:33:13.945 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 13:33:15.472 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 13:33:16.581 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 51b5545a-a7ca-4e3f-a26e-bf2606408d14
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 13:33:16.592 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 13:33:17.557 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 13:33:18.783 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 13:33:18.838 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 13:33:18.866 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 20.163 seconds (process running for 21.186)
+2026-07-28 13:33:19.304 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 13:33:28.284 [http-nio-8090-exec-2] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28 13:33:28.300 [http-nio-8090-exec-2] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-28 13:33:28.300 [http-nio-8090-exec-2] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-07-28 13:33:41.071 [http-nio-8090-exec-7] ERROR [cid=75c100be] c.m.common.GlobalExceptionHandler - Unhandled exception
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalTime` from String "09:00 AM": Failed to deserialize java.time.LocalTime: (java.time.format.DateTimeParseException) Text '09:00 AM' could not be parsed, unparsed text found at index 5
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:406)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.microlend.identity.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.microlend.common.CorrelationIdFilter.doFilterInternal(CorrelationIdFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalTime` from String "09:00 AM": Failed to deserialize java.time.LocalTime: (java.time.format.DateTimeParseException) Text '09:00 AM' could not be parsed, unparsed text found at index 5
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 76] (through reference chain: com.microlend.grouporigination.dto.CentreRequest["meetingTime"])
+	at com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67)
+	at com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1958)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1245)
+	at com.fasterxml.jackson.datatype.jsr310.deser.JSR310DeserializerBase._handleDateTimeException(JSR310DeserializerBase.java:176)
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer._fromString(LocalTimeDeserializer.java:195)
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer.deserialize(LocalTimeDeserializer.java:109)
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer.deserialize(LocalTimeDeserializer.java:37)
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:545)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:576)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:446)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1493)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:348)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2125)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1501)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395)
+	... 137 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '09:00 AM' could not be parsed, unparsed text found at index 5
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2111)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:2010)
+	at java.base/java.time.LocalTime.parse(LocalTime.java:473)
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer._fromString(LocalTimeDeserializer.java:193)
+	... 149 common frames omitted
+2026-07-28 13:35:08.771 [http-nio-8090-exec-10] INFO  [cid=cbdfc584] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_CREATED userId=2
+2026-07-28 13:38:23.313 [http-nio-8090-exec-7] INFO  [cid=79b732a8] c.m.audit.service.LocalAuditService - AUDIT module=CENTRE action=CENTRE_CREATED userId=2
+2026-07-28 13:39:25.436 [http-nio-8090-exec-8] INFO  [cid=32ce93ef] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-28 13:41:30.736 [http-nio-8090-exec-1] INFO  [cid=d287283d] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-07-28 13:41:30.747 [http-nio-8090-exec-1] INFO  [cid=d287283d] c.m.d.service.DelinquencyService - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=0, accountsScanned=3, casesOpened=0, casesUpdated=0, casesResolved=0]
+2026-07-28 14:06:22.670 [http-nio-8090-exec-6] INFO  [cid=e23bcd99] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-07-28 14:06:22.686 [http-nio-8090-exec-6] INFO  [cid=e23bcd99] c.m.d.service.DelinquencyService - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=0, accountsScanned=3, casesOpened=0, casesUpdated=0, casesResolved=0]
+2026-07-28 14:10:05.698 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 14:10:05.698 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 14:10:05.714 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 14:19:29.298 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 14:19:29.375 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 32248 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 14:19:29.375 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 14:19:31.418 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 14:19:31.665 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 233 ms. Found 18 JPA repository interfaces.
+2026-07-28 14:19:33.944 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 14:19:33.971 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 14:19:33.979 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 14:19:33.982 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 14:19:34.201 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 14:19:34.206 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4747 ms
+2026-07-28 14:19:35.416 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 14:19:35.606 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 14:19:35.665 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 14:19:36.176 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 14:19:36.234 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 14:19:36.448 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79a68657
+2026-07-28 14:19:36.451 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 14:19:38.331 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 14:19:39.378 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 14:19:40.414 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 14:19:41.170 [main] WARN  [cid=none] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminAuditController' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\controller\AdminAuditController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'localAuditService' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\service\LocalAuditService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+2026-07-28 14:19:41.172 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 14:19:41.172 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 14:19:41.189 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 14:19:41.194 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-28 14:19:41.216 [main] INFO  [cid=none] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-28 14:19:41.268 [main] ERROR [cid=none] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminAuditController' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\controller\AdminAuditController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'localAuditService' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\service\LocalAuditService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.microlend.MicroLendApplication.main(MicroLendApplication.java:23)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'localAuditService' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\service\LocalAuditService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:119)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:103)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:290)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:296)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:100)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:70)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:60)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:170)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:252)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:115)
+	... 56 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.query.sqm.UnknownPathException: Could not resolve attribute 'actorUserId' of 'com.microlend.audit.entity.AuditLog' [SELECT a FROM AuditLog a
+WHERE (:userId IS NULL OR a.actorUserId = :userId)
+  AND (:module IS NULL OR a.module = :module)
+  AND (:action IS NULL OR UPPER(a.action) LIKE UPPER(CONCAT('%', :action, '%')))
+  AND (:from IS NULL OR a.timestamp >= :from)
+  AND (:to IS NULL OR a.timestamp <= :to)
+ORDER BY a.timestamp DESC
+]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:143)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:167)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:173)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:860)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:765)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy2/jdk.proxy2.$Proxy151.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:94)
+	... 62 common frames omitted
+Caused by: org.hibernate.query.sqm.UnknownPathException: Could not resolve attribute 'actorUserId' of 'com.microlend.audit.entity.AuditLog' [SELECT a FROM AuditLog a
+WHERE (:userId IS NULL OR a.actorUserId = :userId)
+  AND (:module IS NULL OR a.module = :module)
+  AND (:action IS NULL OR UPPER(a.action) LIKE UPPER(CONCAT('%', :action, '%')))
+  AND (:from IS NULL OR a.timestamp >= :from)
+  AND (:to IS NULL OR a.timestamp <= :to)
+ORDER BY a.timestamp DESC
+]
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:88)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:145)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:132)
+	at org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:802)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:852)
+	... 69 common frames omitted
+Caused by: org.hibernate.query.sqm.PathElementException: Could not resolve attribute 'actorUserId' of 'com.microlend.audit.entity.AuditLog'
+	at org.hibernate.query.sqm.SqmPathSource.getSubPathSource(SqmPathSource.java:95)
+	at org.hibernate.query.sqm.tree.domain.AbstractSqmPath.get(AbstractSqmPath.java:196)
+	at org.hibernate.query.sqm.tree.domain.AbstractSqmFrom.resolvePathPart(AbstractSqmFrom.java:198)
+	at org.hibernate.query.hql.internal.DomainPathPart.resolvePathPart(DomainPathPart.java:42)
+	at org.hibernate.query.hql.internal.BasicDotIdentifierConsumer.consumeIdentifier(BasicDotIdentifierConsumer.java:92)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimplePath(SemanticQueryBuilder.java:5269)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitIndexedPathAccessFragment(SemanticQueryBuilder.java:5218)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGeneralPathFragment(SemanticQueryBuilder.java:5193)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGeneralPathExpression(SemanticQueryBuilder.java:1886)
+	at org.hibernate.grammars.hql.HqlParser$GeneralPathExpressionContext.accept(HqlParser.java:7967)
+	at org.antlr.v4.runtime.tree.AbstractParseTreeVisitor.visitChildren(AbstractParseTreeVisitor.java:46)
+	at org.hibernate.grammars.hql.HqlParserBaseVisitor.visitBarePrimaryExpression(HqlParserBaseVisitor.java:777)
+	at org.hibernate.grammars.hql.HqlParser$BarePrimaryExpressionContext.accept(HqlParser.java:7425)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.createComparisonPredicate(SemanticQueryBuilder.java:2543)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitComparisonPredicate(SemanticQueryBuilder.java:2504)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitComparisonPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$ComparisonPredicateContext.accept(HqlParser.java:6432)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitOrPredicate(SemanticQueryBuilder.java:2383)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitOrPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$OrPredicateContext.accept(HqlParser.java:6523)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGroupedPredicate(SemanticQueryBuilder.java:2364)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGroupedPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$GroupedPredicateContext.accept(HqlParser.java:6352)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:2356)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$WhereClauseContext.accept(HqlParser.java:6173)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1254)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:1035)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:2132)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:1020)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:2003)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:490)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:449)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:322)
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:71)
+	... 73 common frames omitted
+2026-07-28 14:20:15.383 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 14:20:15.456 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 31048 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 14:20:15.456 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 14:20:17.384 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 14:20:17.625 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 232 ms. Found 18 JPA repository interfaces.
+2026-07-28 14:20:19.143 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 14:20:19.159 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 14:20:19.175 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 14:20:19.175 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 14:20:19.306 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 14:20:19.306 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3764 ms
+2026-07-28 14:20:19.907 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 14:20:20.048 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 14:20:20.128 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 14:20:20.571 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 14:20:20.619 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 14:20:20.810 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59282dc6
+2026-07-28 14:20:20.810 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 14:20:22.155 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 14:20:22.904 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 14:20:23.768 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 14:20:24.468 [main] WARN  [cid=none] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminAuditController' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\controller\AdminAuditController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'localAuditService' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\service\LocalAuditService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+2026-07-28 14:20:24.468 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 14:20:24.483 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 14:20:24.483 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 14:20:24.496 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-28 14:20:24.500 [main] INFO  [cid=none] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-28 14:20:24.531 [main] ERROR [cid=none] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminAuditController' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\controller\AdminAuditController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'localAuditService' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\service\LocalAuditService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.microlend.MicroLendApplication.main(MicroLendApplication.java:23)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'localAuditService' defined in file [C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes\com\microlend\audit\service\LocalAuditService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'auditLogRepository' defined in com.microlend.audit.repository.AuditLogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable); Reason: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:119)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:103)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:290)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:296)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.microlend.audit.repository.AuditLogRepository.search(java.lang.Long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.time.LocalDateTime,org.springframework.data.domain.Pageable)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:100)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:70)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:60)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:170)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:252)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:115)
+	... 56 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.query.sqm.UnknownPathException: Could not resolve attribute 'actorUserId' of 'com.microlend.audit.entity.AuditLog' [SELECT a FROM AuditLog a
+WHERE (:userId IS NULL OR a.actorUserId = :userId)
+  AND (:module IS NULL OR a.module = :module)
+  AND (:action IS NULL OR UPPER(a.action) LIKE UPPER(CONCAT('%', :action, '%')))
+  AND (:from IS NULL OR a.timestamp >= :from)
+  AND (:to IS NULL OR a.timestamp <= :to)
+ORDER BY a.timestamp DESC
+]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:143)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:167)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:173)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:860)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:765)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy2/jdk.proxy2.$Proxy151.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:94)
+	... 62 common frames omitted
+Caused by: org.hibernate.query.sqm.UnknownPathException: Could not resolve attribute 'actorUserId' of 'com.microlend.audit.entity.AuditLog' [SELECT a FROM AuditLog a
+WHERE (:userId IS NULL OR a.actorUserId = :userId)
+  AND (:module IS NULL OR a.module = :module)
+  AND (:action IS NULL OR UPPER(a.action) LIKE UPPER(CONCAT('%', :action, '%')))
+  AND (:from IS NULL OR a.timestamp >= :from)
+  AND (:to IS NULL OR a.timestamp <= :to)
+ORDER BY a.timestamp DESC
+]
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:88)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:145)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:132)
+	at org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:802)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:852)
+	... 69 common frames omitted
+Caused by: org.hibernate.query.sqm.PathElementException: Could not resolve attribute 'actorUserId' of 'com.microlend.audit.entity.AuditLog'
+	at org.hibernate.query.sqm.SqmPathSource.getSubPathSource(SqmPathSource.java:95)
+	at org.hibernate.query.sqm.tree.domain.AbstractSqmPath.get(AbstractSqmPath.java:196)
+	at org.hibernate.query.sqm.tree.domain.AbstractSqmFrom.resolvePathPart(AbstractSqmFrom.java:198)
+	at org.hibernate.query.hql.internal.DomainPathPart.resolvePathPart(DomainPathPart.java:42)
+	at org.hibernate.query.hql.internal.BasicDotIdentifierConsumer.consumeIdentifier(BasicDotIdentifierConsumer.java:92)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimplePath(SemanticQueryBuilder.java:5269)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitIndexedPathAccessFragment(SemanticQueryBuilder.java:5218)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGeneralPathFragment(SemanticQueryBuilder.java:5193)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGeneralPathExpression(SemanticQueryBuilder.java:1886)
+	at org.hibernate.grammars.hql.HqlParser$GeneralPathExpressionContext.accept(HqlParser.java:7967)
+	at org.antlr.v4.runtime.tree.AbstractParseTreeVisitor.visitChildren(AbstractParseTreeVisitor.java:46)
+	at org.hibernate.grammars.hql.HqlParserBaseVisitor.visitBarePrimaryExpression(HqlParserBaseVisitor.java:777)
+	at org.hibernate.grammars.hql.HqlParser$BarePrimaryExpressionContext.accept(HqlParser.java:7425)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.createComparisonPredicate(SemanticQueryBuilder.java:2543)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitComparisonPredicate(SemanticQueryBuilder.java:2504)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitComparisonPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$ComparisonPredicateContext.accept(HqlParser.java:6432)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitOrPredicate(SemanticQueryBuilder.java:2383)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitOrPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$OrPredicateContext.accept(HqlParser.java:6523)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGroupedPredicate(SemanticQueryBuilder.java:2364)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitGroupedPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$GroupedPredicateContext.accept(HqlParser.java:6352)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2373)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6307)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:2356)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$WhereClauseContext.accept(HqlParser.java:6173)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1254)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:1035)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:2132)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:1020)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:275)
+	at org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:2003)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:490)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:449)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:322)
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:71)
+	... 73 common frames omitted
+2026-07-28 14:23:10.022 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 14:23:10.100 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 30804 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 14:23:10.100 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 14:23:12.001 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 14:23:12.223 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 193 ms. Found 18 JPA repository interfaces.
+2026-07-28 14:23:14.116 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 14:23:14.132 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 14:23:14.147 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 14:23:14.147 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 14:23:14.289 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 14:23:14.296 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4126 ms
+2026-07-28 14:23:15.200 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 14:23:15.390 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 14:23:15.496 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 14:23:16.646 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 14:23:16.731 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 14:23:17.022 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34647f58
+2026-07-28 14:23:17.026 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 14:23:18.478 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 14:23:19.261 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 14:23:20.037 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 14:23:20.854 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 14:23:21.754 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 16d032e8-59f6-45e9-b946-65544a31d9bf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 14:23:21.756 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 14:23:22.496 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 14:23:23.382 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 14:23:23.432 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 14:23:23.461 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 14.113 seconds (process running for 14.627)
+2026-07-28 14:23:23.842 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 14:23:27.433 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28 14:23:27.434 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-28 14:23:27.436 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-28 14:23:28.332 [http-nio-8090-exec-1] INFO  [cid=4c2400c4] c.m.audit.service.LocalAuditService - AUDIT module=AUTH action=LOGIN_SUCCESS userId=1
+2026-07-28 14:24:29.734 [http-nio-8090-exec-5] INFO  [cid=c22764e9] c.m.audit.service.LocalAuditService - AUDIT module=DELINQUENCY action=DELINQUENCY_SCAN userId=1
+2026-07-28 14:24:29.757 [http-nio-8090-exec-5] INFO  [cid=c22764e9] c.m.d.service.DelinquencyService - Delinquency scan complete: ScanResultResponse[installmentsMarkedOverdue=0, accountsScanned=3, casesOpened=0, casesUpdated=0, casesResolved=0]
+2026-07-28 14:24:40.694 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 14:24:40.702 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 14:24:40.726 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-28 15:01:27.345 [background-preinit] INFO  [cid=none] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-28 15:01:27.440 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Starting MicroLendApplication using Java 21.0.2 with PID 30956 (C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\backend\target\classes started by 2503700 in C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend)
+2026-07-28 15:01:27.440 [main] INFO  [cid=none] com.microlend.MicroLendApplication - The following 1 profile is active: "dev"
+2026-07-28 15:01:29.596 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28 15:01:29.956 [main] INFO  [cid=none] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 343 ms. Found 18 JPA repository interfaces.
+2026-07-28 15:01:32.246 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-07-28 15:01:32.289 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2026-07-28 15:01:32.301 [main] INFO  [cid=none] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-28 15:01:32.301 [main] INFO  [cid=none] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-28 15:01:32.462 [main] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-28 15:01:32.465 [main] INFO  [cid=none] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4932 ms
+2026-07-28 15:01:33.321 [main] INFO  [cid=none] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28 15:01:33.457 [main] INFO  [cid=none] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-28 15:01:33.501 [main] INFO  [cid=none] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-28 15:01:34.010 [main] INFO  [cid=none] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28 15:01:34.046 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-28 15:01:34.292 [main] INFO  [cid=none] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3661b732
+2026-07-28 15:01:34.296 [main] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-28 15:01:36.654 [main] INFO  [cid=none] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28 15:01:37.691 [main] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 15:01:39.083 [main] INFO  [cid=none] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-28 15:01:40.605 [main] INFO  [cid=none] c.m.b.service.KycStorageService - KYC storage root: C:\Users\2503700\OneDrive - Cognizant\Desktop\Microlend\uploads\kyc
+2026-07-28 15:01:42.162 [main] WARN  [cid=none] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 44c7f17b-d393-4a46-afbd-4b1a694bf3cd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28 15:01:42.181 [main] INFO  [cid=none] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28 15:01:43.592 [main] INFO  [cid=none] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-07-28 15:01:44.682 [main] INFO  [cid=none] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2026-07-28 15:01:44.723 [main] INFO  [cid=none] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-07-28 15:01:44.744 [main] INFO  [cid=none] com.microlend.MicroLendApplication - Started MicroLendApplication in 18.145 seconds (process running for 18.664)
+2026-07-28 15:01:45.125 [main] INFO  [cid=none] c.m.identity.bootstrap.DataSeeder - DataSeeder: seed users already present, nothing to create.
+2026-07-28 15:01:54.356 [http-nio-8090-exec-1] INFO  [cid=none] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28 15:01:54.358 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-28 15:01:54.364 [http-nio-8090-exec-1] INFO  [cid=none] o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-07-28 15:02:02.763 [http-nio-8090-exec-6] INFO  [cid=56b17c3a] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 2864 ms
+2026-07-28 15:10:53.513 [SpringApplicationShutdownHook] INFO  [cid=none] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28 15:10:53.524 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-28 15:10:53.537 [SpringApplicationShutdownHook] INFO  [cid=none] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

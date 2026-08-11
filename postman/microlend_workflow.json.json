@@ -1,0 +1,657 @@
+{
+  "info": {
+    "_postman_id": "microlend-automated-collection",
+    "name": "MicroLend API — Automated Workflow",
+    "description": "Fully automated MicroLend API collection.\n\nAUTOMATION:\n1. Auto-save tokens — a collection-level Test script inspects every response; when a login/reset returns a token it is saved to the matching per-role variable (admin_token, field_officer_token, credit_officer_token, branch_manager_token, collections_officer_token, borrower_token) based on the returned role. Returned IDs (centre_id, group_id, borrower_id, application_id, sanction_id, loan_account_id, receipt_id, case_id, kyc_id, loan_product_id) are captured automatically too.\n2. Auto-switch by role — the collection uses Bearer {{current_token}} for auth, and each request/folder sets current_token to the token of the role that owns it via a tiny pre-request script. You never copy a token manually.\n\nHOW TO USE:\n- Select the 'MicroLend - Dev Environment' environment.\n- Run the 'End-to-End Workflow' folder top-to-bottom for a full demo, OR\n- Use 'API Library' for ad-hoc calls (authenticate the role once via its login+reset, then any request in that role's folder just works).\n\nNote: the KYC upload request needs a file selected manually (Postman cannot attach a binary automatically).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{current_token}}", "type": "string" }]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "javascript",
+        "exec": [
+          "// Collection pre-request: intentionally empty. Role token switching is done per folder/request."
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "javascript",
+        "exec": [
+          "// === MicroLend global automation: auto-save tokens (by role) + common IDs ===",
+          "var res;",
+          "try { res = pm.response.json(); } catch (e) { res = null; }",
+          "if (res && typeof res === 'object' && !Array.isArray(res)) {",
+          "  var roleToken = {",
+          "    NBFC_ADMIN: 'admin_token',",
+          "    FIELD_OFFICER: 'field_officer_token',",
+          "    CREDIT_OFFICER: 'credit_officer_token',",
+          "    BRANCH_MANAGER: 'branch_manager_token',",
+          "    COLLECTIONS_OFFICER: 'collections_officer_token',",
+          "    BORROWER: 'borrower_token'",
+          "  };",
+          "  if (res.token) {",
+          "    pm.environment.set('current_token', res.token);",
+          "    if (res.forcePasswordReset === true) {",
+          "      pm.environment.set('reset_token', res.token);",
+          "    } else if (res.role && roleToken[res.role]) {",
+          "      pm.environment.set(roleToken[res.role], res.token);",
+          "      pm.environment.set('active_role', res.role);",
+          "      console.log('Saved ' + roleToken[res.role] + ' for role ' + res.role);",
+          "    }",
+          "  }",
+          "  var idMap = {",
+          "    productId: 'loan_product_id', centreId: 'centre_id', groupId: 'group_id',",
+          "    kycId: 'kyc_id', applicationId: 'application_id', sanctionId: 'sanction_id',",
+          "    loanAccountId: 'loan_account_id', scheduleId: 'schedule_id',",
+          "    receiptId: 'receipt_id', caseId: 'case_id', userId: 'user_id'",
+          "  };",
+          "  Object.keys(idMap).forEach(function (k) {",
+          "    if (res[k] !== undefined && res[k] !== null) pm.environment.set(idMap[k], res[k]);",
+          "  });",
+          "  if (res.borrower && res.borrower.borrowerId) pm.environment.set('borrower_id', res.borrower.borrowerId);",
+          "  if (res.portalEmail) pm.environment.set('borrower_portal_email', res.portalEmail);",
+          "  if (res.sanctionLetter && res.sanctionLetter.sanctionId) pm.environment.set('sanction_id', res.sanctionLetter.sanctionId);",
+          "}",
+          "pm.test('HTTP status < 400 (got ' + pm.response.code + ')', function () {",
+          "  pm.expect(pm.response.code).to.be.below(400);",
+          "});"
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "End-to-End Workflow",
+      "description": "Runnable full lending lifecycle. Press Run on this folder. Tokens and IDs flow automatically.",
+      "item": [
+        {
+          "name": "Phase 1 · Admin Setup",
+          "item": [
+            {
+              "name": "1.1 Admin Login (returns reset-scoped token)",
+              "request": {
+                "auth": { "type": "noauth" },
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{admin_email}}\",\n  \"password\": \"{{default_seed_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/login"
+              }
+            },
+            {
+              "name": "1.2 Admin Reset Password (returns FULL admin token)",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('reset_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"newPassword\": \"{{permanent_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/reset-password"
+              }
+            },
+            {
+              "name": "1.3 Admin Create Loan Product",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('admin_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"productName\": \"Group General Loan\",\n  \"category\": \"GROUP_LENDING\",\n  \"minAmount\": 5000.00,\n  \"maxAmount\": 50000.00,\n  \"tenureMonths\": 12,\n  \"interestRatePercent\": 14.50,\n  \"interestType\": \"REDUCING_BALANCE\",\n  \"processingFeePercent\": 1.00,\n  \"status\": \"ACTIVE\"\n}" },
+                "url": "{{base_url}}/api/admin/loan-products"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Phase 2 · Field Officer Onboarding",
+          "item": [
+            {
+              "name": "2.1 Field Officer Login",
+              "request": {
+                "auth": { "type": "noauth" },
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{fo_email}}\",\n  \"password\": \"{{default_seed_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/login"
+              }
+            },
+            {
+              "name": "2.2 Field Officer Reset Password",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('reset_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"newPassword\": \"{{permanent_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/reset-password"
+              }
+            },
+            {
+              "name": "2.3 Create Centre",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"centreName\": \"Centre Alpha 1\",\n  \"village\": \"Village East\",\n  \"meetingDay\": \"MONDAY\",\n  \"meetingTime\": \"10:00:00\"\n}" },
+                "url": "{{base_url}}/api/field-officer/centres"
+              }
+            },
+            {
+              "name": "2.4 Create Group",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"groupName\": \"Pragati SHG\",\n  \"centreId\": {{centre_id}},\n  \"jointLiabilityEnabled\": true,\n  \"memberBorrowerIds\": []\n}" },
+                "url": "{{base_url}}/api/field-officer/groups"
+              }
+            },
+            {
+              "name": "2.5 Register Borrower (auto-provisions portal login)",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"name\": \"Anjali Sharma\",\n  \"dateOfBirth\": \"1992-05-15\",\n  \"gender\": \"FEMALE\",\n  \"nationalIdNumber\": \"365111161247\",\n  \"village\": \"Village East\",\n  \"district\": \"South District\",\n  \"phone\": \"9876543210\",\n  \"occupation\": \"Micro Retailer\",\n  \"monthlyIncome\": 22000.00,\n  \"bankAccountNumber\": \"5010023456789\",\n  \"ifscCode\": \"HDFC0001234\",\n  \"portalEmail\": \"anjali.sharma@example.com\",\n  \"borrowerType\": \"GROUP\",\n  \"centreId\": {{centre_id}},\n  \"groupId\": {{group_id}}\n}" },
+                "url": "{{base_url}}/api/field-officer/borrowers"
+              }
+            },
+            {
+              "name": "2.6 Upload KYC Document (attach a file)",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    { "key": "documentType", "value": "NATIONAL_ID", "type": "text" },
+                    { "key": "documentRef", "value": "AADHAAR-REF-3651", "type": "text" },
+                    { "key": "file", "type": "file", "src": [] }
+                  ]
+                },
+                "url": "{{base_url}}/api/field-officer/borrowers/{{borrower_id}}/kyc"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Phase 3 · Credit Verification",
+          "item": [
+            {
+              "name": "3.1 Credit Officer Login",
+              "request": {
+                "auth": { "type": "noauth" },
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{co_email}}\",\n  \"password\": \"{{default_seed_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/login"
+              }
+            },
+            {
+              "name": "3.2 Credit Officer Reset Password",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('reset_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"newPassword\": \"{{permanent_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/reset-password"
+              }
+            },
+            {
+              "name": "3.3 Verify KYC",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('credit_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "PUT",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"status\": \"VERIFIED\",\n  \"remarks\": \"National ID verified against registry records.\"\n}" },
+                "url": "{{base_url}}/api/credit-officer/kyc/{{kyc_id}}/verify"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Phase 4 · Origination & Underwriting",
+          "item": [
+            {
+              "name": "4.1 Field Officer Submit Loan Application",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"borrowerId\": {{borrower_id}},\n  \"loanProductId\": {{loan_product_id}},\n  \"requestedAmount\": 30000.00,\n  \"purpose\": \"Inventory expansion for retail kiosk.\",\n  \"groupId\": {{group_id}}\n}" },
+                "url": "{{base_url}}/api/loan-applications"
+              }
+            },
+            {
+              "name": "4.2 Credit Officer Decision (APPROVE → issues sanction)",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('credit_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "PUT",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"action\": \"APPROVE\",\n  \"sanctionedAmount\": 30000.00,\n  \"override\": false,\n  \"overrideRemarks\": \"\"\n}" },
+                "url": "{{base_url}}/api/credit-officer/applications/{{application_id}}/decision"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Phase 5 · Borrower Acceptance & Disbursal",
+          "item": [
+            {
+              "name": "5.1 Borrower Login",
+              "request": {
+                "auth": { "type": "noauth" },
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{borrower_portal_email}}\",\n  \"password\": \"{{default_seed_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/login"
+              }
+            },
+            {
+              "name": "5.2 Borrower Reset Password",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('reset_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"newPassword\": \"{{permanent_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/reset-password"
+              }
+            },
+            {
+              "name": "5.3 Borrower Accept Sanction (auto-disburse + schedule)",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('borrower_token'));"] } }
+              ],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": "{{base_url}}/api/borrower/sanction-letters/{{sanction_id}}/accept"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Phase 6 · Collection Servicing",
+          "item": [
+            {
+              "name": "6.1 Field Officer Pull Repayment Schedule",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } },
+                { "listen": "test", "script": { "type": "javascript", "exec": [
+                  "var a = pm.response.json();",
+                  "if (Array.isArray(a) && a.length) {",
+                  "  var pending = a.filter(function (x) { return x.status === 'PENDING'; });",
+                  "  pm.environment.set('schedule_id', (pending[0] || a[0]).scheduleId);",
+                  "}"
+                ] } }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/api/field-officer/loans/{{loan_account_id}}/schedule"
+              }
+            },
+            {
+              "name": "6.2 Field Officer Record Collection",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"loanAccountId\": {{loan_account_id}},\n  \"scheduleId\": {{schedule_id}},\n  \"collectedAmount\": 2700.00,\n  \"mode\": \"CENTRE_COLLECTION\"\n}" },
+                "url": "{{base_url}}/api/field-officer/collections"
+              }
+            },
+            {
+              "name": "6.3 Borrower Approve Receipt (marks installment paid)",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('borrower_token'));"] } }
+              ],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": "{{base_url}}/api/borrower/receipts/{{receipt_id}}/approve"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Phase 7 · Delinquency & Analytics",
+          "item": [
+            {
+              "name": "7.1 Branch Manager Login",
+              "request": {
+                "auth": { "type": "noauth" },
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{bm_email}}\",\n  \"password\": \"{{default_seed_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/login"
+              }
+            },
+            {
+              "name": "7.2 Branch Manager Reset Password",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('reset_token'));"] } }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"newPassword\": \"{{permanent_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/reset-password"
+              }
+            },
+            {
+              "name": "7.3 Admin Run Delinquency Scan",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('admin_token'));"] } }
+              ],
+              "request": { "method": "POST", "header": [], "url": "{{base_url}}/api/admin/delinquency/run" }
+            },
+            {
+              "name": "7.4 Branch Manager List Delinquency Cases",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('branch_manager_token'));"] } },
+                { "listen": "test", "script": { "type": "javascript", "exec": [
+                  "var a = pm.response.json();",
+                  "if (Array.isArray(a) && a.length) pm.environment.set('case_id', a[0].caseId);"
+                ] } }
+              ],
+              "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/branch-manager/delinquency-cases" }
+            },
+            {
+              "name": "7.5 Branch Manager List Collections Officers",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('branch_manager_token'));"] } },
+                { "listen": "test", "script": { "type": "javascript", "exec": [
+                  "var a = pm.response.json();",
+                  "if (Array.isArray(a) && a.length) pm.environment.set('collections_officer_id', a[0].userId);"
+                ] } }
+              ],
+              "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/branch-manager/collections-officers" }
+            },
+            {
+              "name": "7.6 Branch Manager Assign Case",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('branch_manager_token'));"] } }
+              ],
+              "request": {
+                "method": "PUT",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"collectionsOfficerId\": {{collections_officer_id}}\n}" },
+                "url": "{{base_url}}/api/branch-manager/delinquency-cases/{{case_id}}/assign"
+              }
+            },
+            {
+              "name": "7.7 Branch Manager PAR Distribution",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('branch_manager_token'));"] } }
+              ],
+              "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/par-distribution?scope=branch" }
+            },
+            {
+              "name": "7.8 Branch Manager NPA Trend",
+              "event": [
+                { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('branch_manager_token'));"] } }
+              ],
+              "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/npa-trend?scope=branch" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "API Library (all endpoints by role)",
+      "description": "Every endpoint grouped by role. Each role folder auto-switches current_token to that role. Authenticate the role once (via its login + reset in the End-to-End folder, or the Common → Auth requests) before using its folder.",
+      "item": [
+        {
+          "name": "Common (all roles)",
+          "item": [
+            {
+              "name": "Login",
+              "request": {
+                "auth": { "type": "noauth" },
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{admin_email}}\",\n  \"password\": \"{{default_seed_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/login"
+              }
+            },
+            {
+              "name": "Reset Password",
+              "event": [ { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('reset_token'));"] } } ],
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"newPassword\": \"{{permanent_password}}\"\n}" },
+                "url": "{{base_url}}/api/auth/reset-password"
+              }
+            },
+            { "name": "Get Me", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/auth/me" } },
+            { "name": "Get Profile", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/profile" } },
+            {
+              "name": "Update Profile",
+              "request": {
+                "method": "PUT",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"name\": \"Updated Name\",\n  \"phone\": \"9876500000\",\n  \"bankAccountNumber\": \"5010099999999\",\n  \"ifscCode\": \"HDFC0009999\"\n}" },
+                "url": "{{base_url}}/api/profile"
+              }
+            },
+            { "name": "List Notifications", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/notifications" } },
+            { "name": "Unread Count", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/notifications/unread-count" } },
+            { "name": "Mark Notification Read", "request": { "method": "PUT", "header": [], "url": "{{base_url}}/api/notifications/1/read" } },
+            { "name": "Ping (public)", "request": { "auth": { "type": "noauth" }, "method": "GET", "header": [], "url": "{{base_url}}/ping" } }
+          ]
+        },
+        {
+          "name": "NBFC Admin",
+          "event": [ { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('admin_token'));"] } } ],
+          "item": [
+            { "name": "List Loan Products", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/admin/loan-products" } },
+            {
+              "name": "Create Loan Product",
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"productName\": \"Individual Micro Loan\",\n  \"category\": \"INDIVIDUAL\",\n  \"minAmount\": 3000.00,\n  \"maxAmount\": 25000.00,\n  \"tenureMonths\": 10,\n  \"interestRatePercent\": 16.00,\n  \"interestType\": \"FLAT\",\n  \"processingFeePercent\": 1.50,\n  \"status\": \"ACTIVE\"\n}" },
+                "url": "{{base_url}}/api/admin/loan-products"
+              }
+            },
+            { "name": "Get Loan Product", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/admin/loan-products/{{loan_product_id}}" } },
+            {
+              "name": "Update Loan Product",
+              "request": {
+                "method": "PUT",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"productName\": \"Group General Loan (v2)\",\n  \"category\": \"GROUP_LENDING\",\n  \"minAmount\": 5000.00,\n  \"maxAmount\": 60000.00,\n  \"tenureMonths\": 12,\n  \"interestRatePercent\": 13.75,\n  \"interestType\": \"REDUCING_BALANCE\",\n  \"processingFeePercent\": 1.00,\n  \"status\": \"ACTIVE\"\n}" },
+                "url": "{{base_url}}/api/admin/loan-products/{{loan_product_id}}"
+              }
+            },
+            { "name": "EMI Preview", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/admin/loan-products/{{loan_product_id}}/emi-preview" } },
+            { "name": "List Users", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/admin/users" } },
+            {
+              "name": "Create User",
+              "request": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"name\": \"New Field Officer\",\n  \"email\": \"fo2@microlend.com\",\n  \"phone\": \"9000000012\",\n  \"role\": \"FIELD_OFFICER\",\n  \"branchId\": 1,\n  \"password\": \"1234\"\n}" },
+                "url": "{{base_url}}/api/admin/users"
+              }
+            },
+            {
+              "name": "Update User",
+              "request": {
+                "method": "PUT",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": { "mode": "raw", "raw": "{\n  \"name\": \"Updated User\",\n  \"email\": \"fo2@microlend.com\",\n  \"role\": \"FIELD_OFFICER\",\n  \"branchId\": 1\n}" },
+                "url": "{{base_url}}/api/admin/users/{{user_id}}"
+              }
+            },
+            { "name": "Delete User", "request": { "method": "DELETE", "header": [], "url": "{{base_url}}/api/admin/users/{{user_id}}" } },
+            { "name": "Audit Log (filterable)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/admin/audit-log?module=&action=&page=0&size=20" } },
+            { "name": "Run Delinquency Scan", "request": { "method": "POST", "header": [], "url": "{{base_url}}/api/admin/delinquency/run" } },
+            { "name": "Backdate Installment (demo)", "request": { "method": "POST", "header": [], "url": "{{base_url}}/api/admin/delinquency/backdate?loanAccountId={{loan_account_id}}&days=45" } },
+            { "name": "Seed Demo Portfolio", "request": { "method": "POST", "header": [], "url": "{{base_url}}/api/admin/delinquency/demo-portfolio" } },
+            { "name": "Analytics — PAR (system)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/par-distribution?scope=system" } },
+            { "name": "Analytics — Portfolio Trend (system)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/portfolio-trend?scope=system" } },
+            { "name": "Analytics — Collection Efficiency (system)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/collection-efficiency?scope=system" } },
+            { "name": "Analytics — Officer Performance (system)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/officer-performance?scope=system" } },
+            { "name": "Analytics — Loan Funnel (system)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/loan-funnel?scope=system" } },
+            { "name": "Analytics — NPA Trend (system)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/npa-trend?scope=system" } }
+          ]
+        },
+        {
+          "name": "Field Officer",
+          "event": [ { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('field_officer_token'));"] } } ],
+          "item": [
+            { "name": "List Centres", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/centres" } },
+            {
+              "name": "Create Centre",
+              "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"centreName\": \"Centre Beta\",\n  \"village\": \"Village West\",\n  \"meetingDay\": \"WEDNESDAY\",\n  \"meetingTime\": \"11:00:00\"\n}" }, "url": "{{base_url}}/api/field-officer/centres" }
+            },
+            {
+              "name": "Update Centre",
+              "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"centreName\": \"Centre Beta (renamed)\",\n  \"village\": \"Village West\",\n  \"meetingDay\": \"FRIDAY\",\n  \"meetingTime\": \"09:30:00\"\n}" }, "url": "{{base_url}}/api/field-officer/centres/{{centre_id}}" }
+            },
+            { "name": "Delete Centre", "request": { "method": "DELETE", "header": [], "url": "{{base_url}}/api/field-officer/centres/{{centre_id}}" } },
+            { "name": "List Groups", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/groups" } },
+            {
+              "name": "Create Group",
+              "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"groupName\": \"Unnati SHG\",\n  \"centreId\": {{centre_id}},\n  \"jointLiabilityEnabled\": true,\n  \"memberBorrowerIds\": []\n}" }, "url": "{{base_url}}/api/field-officer/groups" }
+            },
+            {
+              "name": "Update Group",
+              "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"groupName\": \"Unnati SHG (renamed)\",\n  \"centreId\": {{centre_id}},\n  \"jointLiabilityEnabled\": false,\n  \"memberBorrowerIds\": []\n}" }, "url": "{{base_url}}/api/field-officer/groups/{{group_id}}" }
+            },
+            { "name": "Delete Group", "request": { "method": "DELETE", "header": [], "url": "{{base_url}}/api/field-officer/groups/{{group_id}}" } },
+            { "name": "Group Summary", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/groups/{{group_id}}/summary" } },
+            { "name": "List My Borrowers", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/borrowers" } },
+            {
+              "name": "Register Borrower",
+              "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Ravi Kumar\",\n  \"dateOfBirth\": \"1990-03-10\",\n  \"gender\": \"MALE\",\n  \"nationalIdNumber\": \"365111161254\",\n  \"village\": \"Village East\",\n  \"district\": \"South District\",\n  \"phone\": \"9876500011\",\n  \"occupation\": \"Farmer\",\n  \"monthlyIncome\": 18000.00,\n  \"bankAccountNumber\": \"5010023456790\",\n  \"ifscCode\": \"HDFC0001234\",\n  \"portalEmail\": \"ravi.kumar@example.com\",\n  \"borrowerType\": \"INDIVIDUAL\",\n  \"centreId\": {{centre_id}}\n}" }, "url": "{{base_url}}/api/field-officer/borrowers" }
+            },
+            { "name": "Get Borrower", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/borrowers/{{borrower_id}}" } },
+            {
+              "name": "Upload KYC (attach a file)",
+              "request": { "method": "POST", "header": [], "body": { "mode": "formdata", "formdata": [ { "key": "documentType", "value": "NATIONAL_ID", "type": "text" }, { "key": "documentRef", "value": "REF-123", "type": "text" }, { "key": "file", "type": "file", "src": [] } ] }, "url": "{{base_url}}/api/field-officer/borrowers/{{borrower_id}}/kyc" }
+            },
+            { "name": "List Borrower KYC", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/borrowers/{{borrower_id}}/kyc" } },
+            { "name": "Borrower Loans", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/borrowers/{{borrower_id}}/loans" } },
+            { "name": "Loan Schedule", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/loans/{{loan_account_id}}/schedule" } },
+            {
+              "name": "Record Collection",
+              "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"loanAccountId\": {{loan_account_id}},\n  \"scheduleId\": {{schedule_id}},\n  \"collectedAmount\": 2700.00,\n  \"mode\": \"CENTRE_COLLECTION\"\n}" }, "url": "{{base_url}}/api/field-officer/collections" }
+            },
+            { "name": "List My Collections", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/field-officer/collections" } },
+            {
+              "name": "Submit Loan Application",
+              "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"borrowerId\": {{borrower_id}},\n  \"loanProductId\": {{loan_product_id}},\n  \"requestedAmount\": 30000.00,\n  \"purpose\": \"Working capital\",\n  \"groupId\": {{group_id}}\n}" }, "url": "{{base_url}}/api/loan-applications" }
+            },
+            { "name": "List Applications", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/loan-applications" } },
+            { "name": "Public Product Catalogue", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/loan-products" } }
+          ]
+        },
+        {
+          "name": "Credit Officer",
+          "event": [ { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('credit_officer_token'));"] } } ],
+          "item": [
+            { "name": "Application Queue", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/credit-officer/applications" } },
+            { "name": "Waitlisted Applications", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/credit-officer/applications/waitlisted" } },
+            { "name": "Application Assessment", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/credit-officer/applications/{{application_id}}/assessment" } },
+            {
+              "name": "Decision (APPROVE / WAITLIST / REJECT)",
+              "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"action\": \"APPROVE\",\n  \"sanctionedAmount\": 30000.00,\n  \"override\": false,\n  \"overrideRemarks\": \"\"\n}" }, "url": "{{base_url}}/api/credit-officer/applications/{{application_id}}/decision" }
+            },
+            { "name": "Pending KYC Borrowers", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/credit-officer/borrowers/pending-kyc" } },
+            { "name": "Get Borrower (privileged)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/credit-officer/borrowers/{{borrower_id}}" } },
+            { "name": "Borrower KYC List", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/credit-officer/borrowers/{{borrower_id}}/kyc" } },
+            {
+              "name": "Verify KYC",
+              "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"status\": \"VERIFIED\",\n  \"remarks\": \"Documents verified.\"\n}" }, "url": "{{base_url}}/api/credit-officer/kyc/{{kyc_id}}/verify" }
+            },
+            { "name": "Download KYC File", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/credit-officer/kyc/{{kyc_id}}/file" } }
+          ]
+        },
+        {
+          "name": "Branch Manager",
+          "event": [ { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('branch_manager_token'));"] } } ],
+          "item": [
+            { "name": "All Borrowers (branch)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/branch-manager/borrowers" } },
+            { "name": "Officer Roster", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/branch-manager/officers" } },
+            { "name": "Delinquency Cases", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/branch-manager/delinquency-cases" } },
+            { "name": "Collections Officers", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/branch-manager/collections-officers" } },
+            {
+              "name": "Assign Case",
+              "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"collectionsOfficerId\": {{collections_officer_id}}\n}" }, "url": "{{base_url}}/api/branch-manager/delinquency-cases/{{case_id}}/assign" }
+            },
+            { "name": "Receipt Disputes", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/branch-manager/receipt-disputes" } },
+            {
+              "name": "Co-Sign Receipt (resolve dispute)",
+              "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"justification\": \"Verified collection with field officer; approving on borrower's behalf.\"\n}" }, "url": "{{base_url}}/api/branch-manager/receipts/{{receipt_id}}/co-sign" }
+            },
+            { "name": "Analytics — PAR (branch)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/par-distribution?scope=branch" } },
+            { "name": "Analytics — Portfolio Trend (branch)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/portfolio-trend?scope=branch" } },
+            { "name": "Analytics — Collection Efficiency (branch)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/collection-efficiency?scope=branch" } },
+            { "name": "Analytics — Officer Performance (branch)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/officer-performance?scope=branch" } },
+            { "name": "Analytics — Loan Funnel (branch)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/loan-funnel?scope=branch" } },
+            { "name": "Analytics — NPA Trend (branch)", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/analytics/npa-trend?scope=branch" } }
+          ]
+        },
+        {
+          "name": "Collections Officer",
+          "event": [ { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('collections_officer_token'));"] } } ],
+          "item": [
+            { "name": "My Assigned Cases", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/collections-officer/cases" } }
+          ]
+        },
+        {
+          "name": "Borrower",
+          "event": [ { "listen": "prerequest", "script": { "type": "javascript", "exec": ["pm.environment.set('current_token', pm.environment.get('borrower_token'));"] } } ],
+          "item": [
+            { "name": "Dashboard", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/borrower/dashboard" } },
+            { "name": "My Loans", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/borrower/loans" } },
+            { "name": "Loan Schedule", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/borrower/loans/{{loan_account_id}}/schedule" } },
+            { "name": "My Sanction Letters", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/borrower/sanction-letters" } },
+            { "name": "Accept Sanction", "request": { "method": "PUT", "header": [], "url": "{{base_url}}/api/borrower/sanction-letters/{{sanction_id}}/accept" } },
+            { "name": "Reject Sanction", "request": { "method": "PUT", "header": [], "url": "{{base_url}}/api/borrower/sanction-letters/{{sanction_id}}/reject" } },
+            { "name": "My Receipts", "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/borrower/receipts" } },
+            { "name": "Approve Receipt", "request": { "method": "PUT", "header": [], "url": "{{base_url}}/api/borrower/receipts/{{receipt_id}}/approve" } },
+            {
+              "name": "Dispute Receipt",
+              "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"disputeRemarks\": \"I did not make this payment.\"\n}" }, "url": "{{base_url}}/api/borrower/receipts/{{receipt_id}}/dispute" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

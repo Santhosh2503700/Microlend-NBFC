@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MicroLend">
+  <rect width="64" height="64" rx="14" fill="#004D40" />
+  <!-- Ascending-bar / growth motif -->
+  <rect x="16" y="36" width="8" height="14" rx="2" fill="#0B8A75" />
+  <rect x="28" y="28" width="8" height="22" rx="2" fill="#2E9E86" />
+  <rect x="40" y="18" width="8" height="32" rx="2" fill="#7FD8C6" />
+  <!-- Leaf accent atop the tallest bar -->
+  <path d="M44 18c0-6 6-10 10-10 0 6-4 10-10 10z" fill="#7FD8C6" />
+</svg>

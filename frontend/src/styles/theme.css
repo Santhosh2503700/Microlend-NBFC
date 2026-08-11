@@ -1,0 +1,80 @@
+
+
+:root {
+  /* Brand / primary */
+  --color-primary: #004d40;
+  --color-primary-hover: #0b8a75;
+  --color-selection-tint: #e0f2f1;
+
+  /* Surfaces */
+  --color-canvas: #f8f9fa;
+  --color-card: #e2f3ed;
+  --color-text: #1c2826;
+  --color-text-muted: #5b6b68;
+  --color-border: #9fcdbf;
+
+  /* Sidebar glass */
+  --sidebar-bg: rgba(0, 77, 64, 0.94);
+  --sidebar-border: rgba(0, 77, 64, 0.1);
+  --sidebar-blur: 12px;
+  --sidebar-active: #004d40;
+  --sidebar-item-text: rgba(255, 255, 255, 0.82);
+  --sidebar-item-text-active: #ffffff;
+  --sidebar-item-hover: rgba(255, 255, 255, 0.12);
+
+  /* Header glass */
+  --header-bg: rgba(255, 255, 255, 0.72);
+  --header-blur: 12px;
+  --header-border: rgba(0, 77, 64, 0.08);
+
+  /* Semantic status */
+  --color-success: #2e7d32;
+  --color-warning: #ef6c00;
+  --color-danger: #d32f2f;
+  --color-success-tint: #e8f5e9;
+  --color-warning-tint: #fff3e0;
+  --color-danger-tint: #fdecea;
+  --color-info-tint: #e0f2f1;
+
+  /* Typography */
+  --font-family: "Plus Jakarta Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 0.95rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgba(16, 40, 34, 0.04),
+    0 4px 16px rgba(16, 40, 34, 0.06);
+
+  --shadow-pop: 0 8px 28px rgba(16, 40, 34, 0.16);
+
+  /* Layout */
+  --sidebar-width: 256px;
+  --header-height: 64px;
+}

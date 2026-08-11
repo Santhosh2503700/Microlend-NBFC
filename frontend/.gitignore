@@ -1,0 +1,32 @@
+# Node & Vite Dependencies / Builds
+node_modules
+dist
+dist-ssr
+.vite
+*.local
+
+# Environment & Secrets (DO NOT COMMIT)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs & Operating System Files
+*.log
+logs/
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA & IDE Files
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Java & Maven Build Directories
+target/
+*.class
+
+# User Uploaded Documents & Media
+uploads/
