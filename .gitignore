@@ -1,0 +1,46 @@
+# ===================================
+# Environment Files & Secrets
+# ===================================
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# ===================================
+# User Uploads & Application Logs
+# ===================================
+uploads/
+uploads/**
+logs/
+*.log
+
+# ===================================
+# Java / Maven Build Artifacts
+# ===================================
+target/
+backend/target/
+*.class
+*.jar
+*.war
+
+# ===================================
+# Node / React Build Artifacts
+# ===================================
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+.vite/
+
+# ===================================
+# IDE & System Files
+# ===================================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.DS_Store
+Thumbs.db
