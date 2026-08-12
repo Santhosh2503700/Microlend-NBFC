@@ -30,3 +30,7 @@ target/
 
 # User Uploaded Documents & Media
 uploads/
+uploads/**
+
+backend/target/
+target/
