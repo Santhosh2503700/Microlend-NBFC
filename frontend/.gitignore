@@ -1,36 +1,46 @@
-# Node & Vite Dependencies / Builds
-node_modules
-dist
-dist-ssr
-.vite
-*.local
-
-# Environment & Secrets (DO NOT COMMIT)
+# ===================================
+# Environment Files & Secrets
+# ===================================
 .env
 .env.local
 .env.*.local
 *.env
+!.env.example
 
-# Logs & Operating System Files
-*.log
+# ===================================
+# User Uploads & Application Logs
+# ===================================
+uploads/
+uploads/**
 logs/
-.DS_Store
-Thumbs.db
+*.log
 
-# IntelliJ IDEA & IDE Files
+# ===================================
+# Java / Maven Build Artifacts
+# ===================================
+target/
+backend/target/
+*.class
+*.jar
+*.war
+
+# ===================================
+# Node / React Build Artifacts
+# ===================================
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+.vite/
+
+# ===================================
+# IDE & System Files
+# ===================================
 .idea/
 *.iml
 *.iws
 *.ipr
 out/
-
-# Java & Maven Build Directories
-target/
-*.class
-
-# User Uploaded Documents & Media
-uploads/
-uploads/**
-
-backend/target/
-target/
+.DS_Store
+Thumbs.db
